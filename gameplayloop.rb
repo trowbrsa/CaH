@@ -1,5 +1,5 @@
 module Game
-  class Czar
+  class GamePlayLoop
 
   end
 end
