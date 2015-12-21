@@ -1,6 +1,7 @@
 require 'csv'
+require 'pry'
+require 'colorize'
 
-require './czar.rb'
 require './player.rb'
 require './points.rb'
 require './cards.rb'
