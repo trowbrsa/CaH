@@ -9,6 +9,10 @@ module Game
   class Play
     def initialize
       @players = get_players
+      @board = Game::Board.new
+      @players.each do |player|
+        @board.deal_white_cards(player)
+      end
     end
 
     def get_players
@@ -33,6 +37,10 @@ module Game
     def play
       puts "Now we are playing!"
       puts @players
+      @players.each do |player|
+        player.list_white_cards
+      end
+      binding.pry
     end
 
 
