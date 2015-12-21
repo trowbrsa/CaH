@@ -1,5 +1,5 @@
 module Game
-  class Cards
+  class GamePlayLoop
 
   end
 end
