@@ -1,8 +1,8 @@
+require ''
 require "CSV"
 module Game
 
   class GamePlayLoop
-    puts "Let's play Cards Against Humanity!"
     puts "How many players do you have?"
     num_players = gets.chomp.to_i
     count = 0
