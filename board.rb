@@ -1,6 +1,8 @@
 module Game
   class Cards
     def initialize
+      make_white_deck
+      make_black_deck
     end
     def make_white_deck
       white_deck = CSV.read("./csv/whitecards.csv")
