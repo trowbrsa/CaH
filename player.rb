@@ -5,7 +5,7 @@ module Game
       @name = name
       @score = 0
       @czar = false
-      white_cards = ["funny_card", "blabahab", "thest best blahabah"]
+      white_cards = []
       black_cards_won = []
       czar_card = ""
     end
