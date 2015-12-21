@@ -1,13 +1,12 @@
 require "CSV"
 module Game
-<<<<<<< HEAD:cards.rb
   class Cards
     def initialize
     end
     def make_white_deck
       white_deck = CSV.read("./csv/whitecards.csv")
     end
-=======
+
   class GamePlayLoop
     puts "Let's play Cards Against Humanity!"
     puts "How many players do you have?"
@@ -23,6 +22,5 @@ module Game
       # call czar method and tell the users who the czar is
     end
 
->>>>>>> 5324e6209d6a4eafa6c75a873b030cfa5a8f2bb7:gameplayloop.rb
   end
 end
