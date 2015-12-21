@@ -1,5 +1,15 @@
 module Game
   class Player
     
-  end
+    def initialize
+      @name = name
+      @points = points
+      @czar = czar
+    end
+
+    def czar
+      @czar = Player.new
+
+    end
+ end
 end
