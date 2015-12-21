@@ -21,19 +21,19 @@ module Game
 
     def deal_white_cards(player)
       # deal white cards to everyone so their hand is at 10
-      if white_deck.length >= player.w_cards.length
-        while player.w_cards.length < 10
-          player.w_cards.push(white_deck.slice!)
+      if white_deck.length >= player.white_cards.length
+        while player.white_cards.length < 10
+          player.white_cards.push(white_deck.slice!)
         end
       else
         #The game is over
       end
     end
 
-    def assign_czar_card
+    def assign_czar_card(player)
       # deal one black card to the czar
       if black_deck > 0
-        czar_card = black_deck.slice!
+        player.czar_card = black_deck.slice!
       else
         #The game is over
       end
