@@ -8,7 +8,7 @@ require './board.rb'
 module Game
   class Play
     def initialize
-      get_players
+      @players = get_players
     end
 
     def get_players
@@ -16,18 +16,23 @@ module Game
       puts "How many players do you have?"
       num_players = gets.chomp.to_i
       count = 0
-      players = []
+      player_names = []
       while count < num_players
         puts "Please enter a player's name:"
         player_name = gets.chomp
         count += 1
-        players.push(player_name)
+        player_names.push(player_name)
       end
-      puts players
+      players = []
+      player_names.each do |name|
+        player = Player.new(name)
+        players.push(player)
+      end
     end
 
     def play
       puts "Now we are playing!"
+      puts @players
     end
 
 
