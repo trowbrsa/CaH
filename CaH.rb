@@ -8,7 +8,8 @@ require './board.rb'
 module Game
   class Play
     def initialize
-      @players = get_players
+      @players = []
+      get_players
       @board = Game::Board.new
       @players.each do |player|
         @board.deal_white_cards(player)
@@ -27,10 +28,9 @@ module Game
         count += 1
         player_names.push(player_name)
       end
-      players = []
       player_names.each do |name|
         player = Player.new(name)
-        players.push(player)
+        @players.push(player)
       end
     end
 

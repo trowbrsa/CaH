@@ -1,13 +1,15 @@
 module Game
   class Player
 
+attr_accessor :white_cards, :black_cards_won, :czar, :score, :czar_card
+
     def initialize(name)
       @name = name
       @score = 0
       @czar = false
-      white_cards = []
-      black_cards_won = []
-      czar_card = ""
+      @white_cards = []
+      @black_cards_won = []
+      @czar_card = ""
     end
 
 
