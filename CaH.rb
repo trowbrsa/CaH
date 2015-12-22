@@ -40,7 +40,6 @@ module Game
       @players.each do |player|
         player.list_white_cards
       end
-      binding.pry
     end
 
 

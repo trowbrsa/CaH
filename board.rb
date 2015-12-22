@@ -33,7 +33,7 @@ module Game
     def assign_czar_card(player)
       # deal one black card to the czar
       if @black_deck > 0
-        player.czar_card = @black_deck.slice!
+        player.czar_card = @black_deck.slice!(0)
       else
         #The game is over
       end
