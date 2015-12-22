@@ -9,6 +9,7 @@ module Game
   class Play
     def initialize
       @players = []
+      @czar = ""
       get_players
       @board = Game::Board.new
       @players.each do |player|
@@ -34,12 +35,23 @@ module Game
       end
     end
 
+    def assign_czar
+      if @czar == ""
+        @czar = @players.sample
+      else
+        old_czar_index = @players.index(@czar)
+        new_czar_index = old_czar_index + 1
+        if new_czar_index >= @players.length
+          new_czar_index -= @players.length
+        end
+        @czar = @players[new_czar_index]
+      end
+    end
+
     def play
       puts "Now we are playing!"
-      puts @players
-      @players.each do |player|
-        player.list_white_cards
-      end
+      assign_czar
+      puts "#{@czar.name.upcase} is the current Czar. Pass them the computer!"
     end
 
 

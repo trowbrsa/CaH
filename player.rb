@@ -2,6 +2,7 @@ module Game
   class Player
 
 attr_accessor :white_cards, :black_cards_won, :czar, :score, :czar_card
+attr_reader :name
 
     def initialize(name)
       @name = name
